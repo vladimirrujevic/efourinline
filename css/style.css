@@ -1,0 +1,55 @@
+body{
+  background-color: #aaa;
+  margin: 0;
+}
+
+.content{
+  margin: 0;
+  padding: 0;
+}
+
+.igralci {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #bbb;
+  min-width: 300px;
+  height: 110px;
+}
+
+.igralci div{
+  margin: 5px 0;
+  display: block;
+}
+
+.i1, .i2{
+  display: inline-block;
+  position: absolute;
+  margin: 0;
+  font-weight: bold;
+}
+
+.i1{
+  left: 10px;
+}
+
+.i2{
+  text-align: right;
+  right: 10px;
+}
+
+.i1 img, .i2 img{
+  height: 64px;
+  display: block;
+  margin: 0 20px;
+  float: left;
+}
+
+.score {
+  float: left;
+  display: block;
+  line-height: 64px;
+}
