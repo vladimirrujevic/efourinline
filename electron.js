@@ -11,8 +11,8 @@ function createWindow(){
     height: 600,
     backgroundColor: "#cccccc",
     fulscreenable: false,
-    frame: true,
-    title: "Cirrus"
+    frame: false,
+    title: "Štiri v vrsto"
   }
 
   mainWindow = new BrowserWindow(windowOptions)

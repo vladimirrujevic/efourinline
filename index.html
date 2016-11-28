@@ -3,9 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Štiri v vrsto</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shell.css">
+    <link rel="stylesheet" href="css/game.css">
   </head>
   <body>
+    <header class="titleBar" style="-webkit-app-region: drag" >
+      <div class="wCommand">
+        <a id="btnMin"><img src="img/minimise.svg" alt="-" /></a>
+        <a id="btnX"><img src="img/close.svg" alt="x" /></a>
+      </div>
+    </header>
+    <div class="wrap">
     <div class="igralci">
       <div class="i1">
         <div><span class="ime">Ime</span></div>
@@ -17,10 +25,14 @@
       </div>
     </div>
     <div class="igralnaP">
-
+      <div class="polje"></div>
+      <div class="poljeY"></div>
+      <div class="poljeR"></div>
+    </div>
     </div>
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
     <script type="text/javascript" src="js/jquery.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/game.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script>if (window.module) module = window.module;</script>
   </body>

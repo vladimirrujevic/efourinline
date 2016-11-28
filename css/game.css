@@ -1,0 +1,55 @@
+.polje{
+  background-image: url(../img/tile.png);
+  background-size: 64px 64px;
+  width: 64px;
+  height: 64px;
+}
+
+.igralnaP{
+  position: fixed;
+  top:110px;
+  height: 100%;
+}
+
+.igralci{
+  display: block;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  background-color: #b3b3b3;
+  height: 110px;
+}
+
+.igralci div{
+  margin: 5px 0;
+  display: block;
+}
+
+.i1, .i2{
+  display: inline-block;
+  position: absolute;
+  margin: 0;
+  font-weight: bold;
+}
+
+.i1{
+  left: 10px;
+}
+
+.i2{
+  text-align: right;
+  right: 10px;
+}
+
+.i1 img, .i2 img{
+  height: 64px;
+  display: block;
+  margin: 0 20px;
+  float: left;
+}
+
+.score {
+  float: left;
+  display: block;
+  line-height: 64px;
+}
