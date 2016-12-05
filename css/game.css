@@ -3,21 +3,33 @@
   background-size: 64px 64px;
   width: 64px;
   height: 64px;
+  display: inline-block;
 }
 
 .igralnaP{
-  position: fixed;
+  line-height: 0px;
+  position: absolute;
   top:110px;
-  height: 100%;
+  display: table;
+  /*height: 100%;*/
 }
+
+/*.stolpec{
+  height: inherit;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  clear:both;
+}*/
 
 .igralci{
   display: block;
   margin: 0;
-  position: fixed;
+  position: absolute;
   width: 100%;
-  background-color: #b3b3b3;
   height: 110px;
+  background-color: #b3b3b3;
+  
 }
 
 .igralci div{

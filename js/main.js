@@ -11,6 +11,8 @@ $("#btnMin").click(function(){
 
 $(document).ready(function(){
   initUi();
+  updateGameUi();
+  start();
   /*var i1 = prompt("Igralec 1, vnesite ime:", "Igralec 1");
   var i2 = prompt("Igralec 2, vnesite ime:", "Igralec 2");
   lblName1.html(i1);
@@ -28,7 +30,12 @@ var initUi = function(){
   lblScore1 = $(".i1 .score");
   lblName2 = $(".i2 .ime");
   lblScore2 = $(".i2 .score");
+
 };
+
+$(window).resize(function(){
+  updateGameUi();
+});
 
 var hidden = true;
 var hideTitle = function(){
@@ -46,6 +53,7 @@ var hideTitle = function(){
       500
     );
     hidden = true;
+    updateGameUi();
   }
 
 }
@@ -65,7 +73,7 @@ var showTitle = function(){
       },
       500
     );
-
+    updateGameUi();
     hidden = false;
   }
 }
