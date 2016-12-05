@@ -1,6 +1,6 @@
 .polje{
   background-image: url(../img/tile.png);
-  background-size: 64px 64px;
+  background-size: cover;
   width: 64px;
   height: 64px;
   display: inline-block;
@@ -10,7 +10,9 @@
   line-height: 0px;
   position: absolute;
   top:110px;
-  display: table;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   /*height: 100%;*/
 }
 
