@@ -6,13 +6,21 @@
   display: inline-block;
 }
 
-.igralnaP{
-  line-height: 0px;
+.wrapG{
   position: absolute;
-  top:110px;
+  top:109px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  height: auto;
+}
+
+.igralnaP{
+  line-height: 0;
+  display: inline-block;
+  height: auto;
+  /*margin-left: auto;
+  margin-right: auto;*/
   /*height: 100%;*/
 }
 

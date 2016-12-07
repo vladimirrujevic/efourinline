@@ -8,19 +8,19 @@ var updateGameUi = function () {
   var w = $('.wrap').height(),
     i = $('.igralci').height(),
     ig = w - i,
-    igw = $('.igralci').width(), 
+    igw = $('.igralci').width(),
     h = 0,
     m = 0;
-  $('.igralnaP').height(ig);
-  if(igw > ig){
+  /*$('.igralnaP').height(ig);*/
+  if(igw >= ig){
     h = Math.round(ig/6);
   } else {
     h = Math.round(igw/7);
   }
   $('.polje').height(h);
   $('.polje').width(h);
-  /*m = Math.round(igw/4 - h/2);
-  $('.igralnaP').css("margin-left", m + "px");*/
+  //m = Math.round(igw/4);
+  /*$('.igralnaP').css("left", $(".igralci").width()/4 + "px");*/
 };
 
 var drawPolje = function () {

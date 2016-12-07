@@ -42,8 +42,7 @@ var hideTitle = function(){
   if(!hidden){
     $("header").animate(
       {
-        top: -25,
-        display: "none"
+        top: -25
       },
       500
     );
@@ -52,6 +51,8 @@ var hideTitle = function(){
       },
       500
     );
+    $(".wrap").height(document.height);
+    $(".wrapG").height(document.height - 110)
     hidden = true;
     updateGameUi();
   }
@@ -62,9 +63,7 @@ var showTitle = function(){
   if(hidden){
     $("header").animate(
       {
-        top: 0,
-        height: 25,
-        display: "block"
+        top: 0
       },
       500
     );
@@ -73,6 +72,8 @@ var showTitle = function(){
       },
       500
     );
+    $(".wrap").height(document.height - 25);
+    $(".wrapG").height(document.height - 110 - 25)
     updateGameUi();
     hidden = false;
   }
