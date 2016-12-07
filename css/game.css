@@ -6,6 +6,14 @@
   display: inline-block;
 }
 
+.Y{
+  background-image: url(../img/tileY.png);
+}
+
+.R{
+  background-image: url(../img/tileR.png);
+}
+
 .wrapG{
   position: absolute;
   top:109px;

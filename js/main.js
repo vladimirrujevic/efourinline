@@ -1,10 +1,10 @@
 var lblScore1, lblScore2, lblName1, lblName2;
 
-$("#btnX").click(function(){
+$("#btnX").click(function () {
   window.close();
 });
 
-$("#btnMin").click(function(){
+$("#btnMin").click(function () {
   const { remote } = require('electron');
   remote.BrowserWindow.getFocusedWindow().minimize();
 });
