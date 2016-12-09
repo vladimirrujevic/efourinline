@@ -8,10 +8,12 @@
 
 .Y{
   background-image: url(../img/tileY.png);
+  background-color: yellow;
 }
 
 .R{
   background-image: url(../img/tileR.png);
+  background-color: red;
 }
 
 .wrapG{
@@ -27,18 +29,19 @@
   line-height: 0;
   display: inline-block;
   height: auto;
-  /*margin-left: auto;
-  margin-right: auto;*/
-  /*height: 100%;*/
 }
 
-/*.stolpec{
-  height: inherit;
+/*.vnosImen{
   display: inline-block;
-  margin: 0;
-  padding: 0;
-  clear:both;
+  height: auto;
+  vertical-align: middle;
+  width: 100%;
+  height: 500px;
 }*/
+
+.vnosImen *{
+  display: inline-block;
+}
 
 .igralci{
   display: block;

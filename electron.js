@@ -12,7 +12,8 @@ function createWindow(){
     backgroundColor: "#cccccc",
     fulscreenable: false,
     frame: false,
-    title: "Štiri v vrsto"
+    title: "Štiri v vrsto",
+    icon: "favicon.ico"
   }
 
   mainWindow = new BrowserWindow(windowOptions)

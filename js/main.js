@@ -1,4 +1,4 @@
-var lblScore1, lblScore2, lblName1, lblName2;
+var lblScore1, lblScore2, lblName1, lblName2, hidden = true, El = false;
 
 $("#btnX").click(function () {
   window.close();
@@ -11,7 +11,6 @@ $("#btnMin").click(function () {
 
 $(document).ready(function(){
   initUi();
-  updateGameUi();
   start();
   /*var i1 = prompt("Igralec 1, vnesite ime:", "Igralec 1");
   var i2 = prompt("Igralec 2, vnesite ime:", "Igralec 2");
@@ -22,7 +21,11 @@ $(document).ready(function(){
   var e = require("electron")
   if(typeof(e) === 'object'){
     showTitle();
+    El = true;
+  } else {
+    hideTitle();
   }
+  updateGameUi();
 });
 
 var initUi = function(){
@@ -30,30 +33,29 @@ var initUi = function(){
   lblScore1 = $(".i1 .score");
   lblName2 = $(".i2 .ime");
   lblScore2 = $(".i2 .score");
-
+  $(".wrap").height($(window).height() - 10);
 };
 
 $(window).resize(function(){
+  if(hidden === true){
+    $(".wrap").height($(window).height() - 10);
+  }else{
+    $(".wrap").height($(window).height() - 35);
+  }
   updateGameUi();
 });
 
-var hidden = true;
+
 var hideTitle = function(){
   if(!hidden){
-    $("header").animate(
-      {
-        top: -25
-      },
-      500
-    );
+    $("header").slideUp(500);
     $(".wrap").animate({
       top: 0
       },
       500
     );
-    $(".wrap").height(document.height);
-    $(".wrapG").height(document.height - 110)
     hidden = true;
+    $(".wrap").height($(window).height() - 10);
     updateGameUi();
   }
 
@@ -61,19 +63,13 @@ var hideTitle = function(){
 
 var showTitle = function(){
   if(hidden){
-    $("header").animate(
-      {
-        top: 0
-      },
-      500
-    );
+    $("header").slideDown(500);
     $(".wrap").animate({
       top: 25
       },
       500
     );
-    $(".wrap").height(document.height - 25);
-    $(".wrapG").height(document.height - 110 - 25)
+    $(".wrap").height($(window).height() - 35);
     updateGameUi();
     hidden = false;
   }
