@@ -5,36 +5,36 @@ const BrowserWindow = electron.BrowserWindow
 
 let mainWindow
 
-function createWindow(){
-  var windowOptions = {
+let createWindow = () => {
+  let windowOptions = {
     width: 800,
     height: 600,
-    backgroundColor: "#cccccc",
+    backgroundColor: '#cccccc',
     fulscreenable: false,
     frame: false,
-    title: "Štiri v vrsto",
-    icon: "favicon.ico"
+    title: 'Štiri v vrsto',
+    icon: 'favicon.ico'
   }
 
   mainWindow = new BrowserWindow(windowOptions)
 
   mainWindow.loadURL(`file://${__dirname}/index.html`)
 
-  mainWindow.on('closed', function(){
-    mainWindow = null;
+  mainWindow.on('closed', () => {
+    mainWindow = null
   })
 }
 
 app.on('ready', createWindow)
 
-app.on('window-all-closed', function(){
-  if(process.platform !== 'darwin'){
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
     app.quit()
   }
 })
 
-app.on('activate', function(){
-  if(mainWindow === null){
+app.on('activate', () => {
+  if (mainWindow === null) {
     createWindow()
   }
 })
