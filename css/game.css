@@ -6,23 +6,42 @@
   display: inline-block;
 }
 
-.igralnaP{
-  line-height: 0px;
-  position: absolute;
-  top:110px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /*height: 100%;*/
+.Y{
+  background-image: url(../img/tileY.png);
+  background-color: yellow;
 }
 
-/*.stolpec{
-  height: inherit;
+.R{
+  background-image: url(../img/tileR.png);
+  background-color: red;
+}
+
+.wrapG{
+  position: absolute;
+  top:109px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: auto;
+}
+
+.igralnaP{
+  line-height: 0;
   display: inline-block;
-  margin: 0;
-  padding: 0;
-  clear:both;
+  height: auto;
+}
+
+/*.vnosImen{
+  display: inline-block;
+  height: auto;
+  vertical-align: middle;
+  width: 100%;
+  height: 500px;
 }*/
+
+.vnosImen *{
+  display: inline-block;
+}
 
 .igralci{
   display: block;

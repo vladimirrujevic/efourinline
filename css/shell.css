@@ -7,7 +7,6 @@ header {
   display: block !important;
   height: 25px;
   position: absolute;
-  top: -25px;
   left: 0;
   margin: 0;
   width: 100%;
@@ -48,10 +47,10 @@ header {
   position: absolute;
   top:0;
   left:0px;
-  height: 100%;
+  display: block;
+  height: auto;
   width: 100%;
   margin: 0;
-
 }
 
 .content{
