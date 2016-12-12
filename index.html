@@ -14,16 +14,13 @@
       </div>
     </header>
     <div class="wrap">
-    <!--<header class="titleBar" style="-webkit-app-region: drag" >
-      <div class="wCommand">
-        <a id="btnMin"><img src="img/minimise.svg" alt="-" /></a>
-        <a id="btnX"><img src="img/close.svg" alt="x" /></a>
-      </div>
-    </header>-->
     <div class="igralci">
       <div class="i1">
         <div><span class="ime">Ime</span></div>
         <div><span class="score">100</span><img src="img/zeton1.png" alt="rdeči"></div>
+      </div>
+      <div class="btns">
+        <input type="button" class="btnNew" value="Nova igra" onclick="start()"/>
       </div>
       <div class="i2">
         <div><span class="ime">Ime</span></div>
@@ -32,11 +29,16 @@
     </div>
     <div class="wrapG">
       <div class="igralnaP"></div>
-      <!--<div class="vnosImen">
-        <p>Igralec <span id="st"></span>, vnesite svoje ime:</p><br/>
-        <input type="text" id="ime"/>
-        <input type="button" id="enter" value="Potrdi"/>
-      </div>-->
+      <div class="vnosImen">
+        <p>Nova igra</p><br/>
+        <p>Igralec <span id="st">1</span>, vnesite svoje ime:</p><br/>
+        <input type="text" id="ime1"/>
+        <input type="button" onclick="vnosImen(1)" class="btnEnter" value="Potrdi"/><br/>
+        <p>Igralec <span id="st">2</span>, vnesite svoje ime</p><br/>
+        <input type="text" id="ime2"/>
+        <input type="button" onclick="vnosImen(2)" class=btnEnter value="Potrdi"/><br/>
+        <input type="button" onclick="start()" id="btnZacni" value="Začni igro"/>
+      </div>
     </div>
     </div>
     <script> if (typeof module === 'object') { window.module = module; module = undefined; } </script>

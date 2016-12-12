@@ -31,13 +31,13 @@
   height: auto;
 }
 
-/*.vnosImen{
+.vnosImen{
   display: inline-block;
   height: auto;
   vertical-align: middle;
   width: 100%;
   height: 500px;
-}*/
+}
 
 .vnosImen *{
   display: inline-block;
@@ -57,7 +57,12 @@
   margin: 5px 0;
   display: block;
 }
-
+.btns{
+  width: 150px;
+  position: absolute;
+  left: 200px;
+  margin: auto;
+}
 .i1, .i2{
   display: inline-block;
   position: absolute;

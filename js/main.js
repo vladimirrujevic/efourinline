@@ -19,11 +19,15 @@ $(document).ready(() => {
     hideTitle()
     El = false
   }
-  start()
+  // start()
+  $(".igralnaP").slideUp()
+  $(".vnosImen").slideDown()
   updateGameUi()
 })
 
 let initUi = () => {
+  $('#ime1').val('');
+  $('#ime2').val('');
   lblName1 = $('.i1 .ime')
   lblScore1 = $('.i1 .score')
   lblName2 = $('.i2 .ime')
