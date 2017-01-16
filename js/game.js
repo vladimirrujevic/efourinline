@@ -2,13 +2,17 @@ var igralnaP, poljeI, polje, igra, ig1, ig2
 igralnaP = $('.igralnaP')
 
 var start = () => {
-  
+  if (mode == 0) {
+    startL()
+  } else {
+    startR()
+  }
+}
+
+var startL = () => {
   if (ig1 === undefined || ig2 === undefined) {
     igralnaP.slideUp()
     $('.vnosImen').slideDown()
-    // ig1 = new Igralec(vnosImen(1), 1)
-    // ig2 = new Igralec(vnosImen(2), 2)
-    // igralnaP.slideToggle();
     alert('Vnesite imena igralcev!')
   } else {
     $('.vnosImen').slideUp()
@@ -21,9 +25,6 @@ var start = () => {
 
 var vnosImen = i => {
   var ime = 'Electron' + i
-  /*if (!El) {
-    ime = prompt('Igralec ' + i + ', vnesite svoje ime:', 'Igralec' + i)
-  }*/
   if (i === 1) {
     ig1 = new Igralec($('#ime1').val(), 1)
   } else {
@@ -92,7 +93,7 @@ var updateGameUi = () => {
 var drawPolje = () => {
   var i, j, d, poljeI
   poljeI = []
-  igralnaP.html('');
+  igralnaP.html('')
   for (i = 0; i < 6; i++) {
     poljeI[i] = []
     for (j = 0; j < 7; j++) {

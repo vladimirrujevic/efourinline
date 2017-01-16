@@ -29,7 +29,11 @@
     </div>
     <div class="wrapG">
       <div class="igralnaP"></div>
-      <div class="vnosImen">
+      <div class="mode">
+        <label><input type="radio" checked="true" name="mode" value="local">Local</label>
+        <label><input type="radio" name="mode" value="remote">Remote</label>
+      </div>
+      <div class="vnosImen" id="viL">
         <p>Nova igra</p><br/>
         <p>Igralec <span id="st">1</span>, vnesite svoje ime:</p><br/>
         <input type="text" id="ime1"/>
@@ -39,12 +43,23 @@
         <input type="button" onclick="vnosImen(2)" class=btnEnter value="Potrdi"/><br/>
         <input type="button" onclick="start()" id="btnZacni" value="Začni igro"/>
       </div>
+      <div class="vnosImen" id="viR">
+        <p>Nova igra</p><br/>
+        <p>ID sobe:</p><br/>
+        <input type="text" id="roomName"><br/>
+        <p>Ime:</p><br/>
+        <input type="text" id="playerName"><br/>
+        <input type="button" onclick="start()" id="btnJoin" value="Prijavi se">
+      </div>
     </div>
     </div>
     <script> if (typeof module === 'object') { window.module = module; module = undefined; } </script>
-    <script type="text/javascript" src="js/jquery.js" charset="utf-8"></script>
+    <!--<script type="text/javascript" src="node_modules/webrtc-adapter/out/adapter.js" charset="utf-8"></script>-->
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/igra.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/game.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/multiplayer.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script> if (window.module) module = window.module; </script>
   </body>

@@ -63,7 +63,7 @@
   left: 200px;
   margin: auto;
 }
-.btnNew, .btnEnter,#btnZacni{
+.btnNew, .btnEnter, #btnZacni, #btnJoin {
   background: url(../img/btnBack.png) no-repeat scroll 0 0;
   background-size: cover;
   border: none;
@@ -84,6 +84,9 @@ input[type="text"] {
   font-weight: bold;
   text-transform: uppercase;
   font-family: Noto Sans, sans-serif;
+}
+#viR{
+  display: none;
 }
 .i1, .i2{
   display: inline-block;

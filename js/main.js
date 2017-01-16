@@ -26,8 +26,8 @@ $(document).ready(() => {
 })
 
 let initUi = () => {
-  $('#ime1').val('');
-  $('#ime2').val('');
+  $('#ime1').val('')
+  $('#ime2').val('')
   lblName1 = $('.i1 .ime')
   lblScore1 = $('.i1 .score')
   lblName2 = $('.i2 .ime')
@@ -49,7 +49,7 @@ let hideTitle = () => {
     $('header').slideUp(500)
     $('.wrap').animate({
       top: 0
-      },
+    },
       500
     )
     hidden = true
